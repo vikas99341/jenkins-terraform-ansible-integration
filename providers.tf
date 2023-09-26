@@ -6,6 +6,6 @@ terraform {
   backend "s3" {
     bucket = "jenkins-ansible-terraform-git-integration-27"
     key    = "terraform.tfstate"
-    region = "ap-south-1"
+    region = "us-east-1"
   }
 }
