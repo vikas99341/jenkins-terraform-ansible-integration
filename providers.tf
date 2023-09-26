@@ -4,8 +4,8 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "javahome-tf-1212"
+    bucket = "jenkins-ansible-terraform-git-integration-27"
     key    = "terraform.tfstate"
-    region = "us-east-1"
+    region = "ap-south-1"
   }
 }

@@ -2,9 +2,9 @@
 - hosts: localhost
   vars:
     state: present
-    s3_bucket: javahome-tf-1212
+    s3_bucket: jenkins-ansible-terraform-git-integration-27
     key: terraform.tfstate
-    region: us-east-1
+    region: ap-south-1
     app_env: dev
   tasks:
     - name: Run terraform scripts

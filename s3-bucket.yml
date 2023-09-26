@@ -3,5 +3,5 @@
   tasks:
     - name: Create S3 bucket
       s3_bucket:
-        name: javahome-tf-1212
+        name: jenkins-ansible-terraform-git-integration-27
         state: present
