@@ -9,7 +9,6 @@
   tasks:
     - name: Run terraform scripts
       terraform:
-        project_path: "./"
         state: "{{ state }}"
         backend_config:
           bucket: "{{s3_bucket}}"
@@ -17,3 +16,6 @@
           region: "{{region}}"
         variables_file: "{{app_env}}.tfvars"
         workspace: "{{app_env}}"
+    - name: Run Shell scripts
+      shell:
+        "terraform apply --auto-approve"
