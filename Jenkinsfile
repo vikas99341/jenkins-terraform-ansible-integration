@@ -13,6 +13,7 @@ pipeline{
       steps{
         sh "terraform init"
         sh returnStatus: true, script: 'terraform workspace new dev'
+        sh "terraform init -reconfigure"
         sh "ansible-playbook terraform.yml"
       }
     }
@@ -21,6 +22,7 @@ pipeline{
       steps{
         sh "terraform init"
         sh returnStatus: true, script: 'terraform workspace new prod'
+        sh "terraform init -reconfigure"
         sh "ansible-playbook terraform.yml -e app_env=prod"
       }
     }
